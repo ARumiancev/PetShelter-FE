@@ -148,12 +148,7 @@ const CreateNewPostForm: React.FC = () => {
 
         <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 3 }}>
           <Button type="submit">Create post</Button>
-          {/* <ButtonScale
-            type="button"
-            onClick={() => navigate('/admin/sculptures')}
-          >
-            Back
-          </ButtonScale> */}
+
         </Box>
       </Box>
     </Container>

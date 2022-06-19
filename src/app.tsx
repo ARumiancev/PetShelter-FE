@@ -49,7 +49,7 @@ const App: React.FC = () => {
           )}
         />
         <Route
-          path="admin/posts/create"
+          path="auth/createPost"
           element={(
             <RequireAuth>
               <CreateNewPostPage />

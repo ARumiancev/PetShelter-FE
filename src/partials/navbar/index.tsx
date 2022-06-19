@@ -26,6 +26,7 @@ const Navbar: React.FC = () => {
             <NavbarLink to="/">Home</NavbarLink>
           </Box>
           <Box sx={{ display: 'flex' }}>
+            <NavbarLink to="/auth/createPost">Create a post</NavbarLink>
             {loggedIn ? <NavbarAuthMenu /> : <NavbarVisitorMenu />}
           </Box>
         </Toolbar>
