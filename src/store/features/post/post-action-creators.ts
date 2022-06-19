@@ -1,5 +1,6 @@
 import { Dispatch } from 'react';
 import PostService from '../../../services/posts-service';
+import { CreatePost, Post } from '../../../types';
 import { AppAction, RootState } from '../../redux-types';
 import { PostActionType, PostsAction } from './post-types';
 

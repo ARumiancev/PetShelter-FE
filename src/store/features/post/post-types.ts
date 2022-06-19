@@ -1,3 +1,5 @@
+import { Post } from '../../../types';
+
 export type PostsState = {
   posts: Post[],
   loading: boolean,
@@ -9,9 +11,9 @@ export enum PostActionType {
   FETCH_POSTS_SUCCESS = 'FETCH_POSTS_SUCCESS',
   FETCH_POSTS_FAILURE = 'FETCH_POSTS_FAILURE',
   POSTS_CLEAR_ERROR = 'POSTS_CLEAR_ERROR',
-  NEW_POST = 'NEW_POST',
-  UPDATE_POST = 'UPDATE_POST',
-  DELETE_POST = 'DELETE_POST',
+  // NEW_POST = 'NEW_POST',
+  // UPDATE_POST = 'UPDATE_POST',
+  // DELETE_POST = 'DELETE_POST',
 }
 
 export type FetchPostsLoadingAction = {
@@ -35,32 +37,32 @@ export type PostsClearErrorAction = {
   type: PostActionType.POSTS_CLEAR_ERROR,
 };
 
-export type CreateNewPostAction = {
-  type: PostActionType.NEW_POST,
-  payload: {
-    post: CreatePost;
-  }
-};
+// export type CreateNewPostAction = {
+//   type: PostActionType.NEW_POST,
+//   payload: {
+//     post: CreatePost;
+//   }
+// };
 
-export type UpdatePostAction = {
-  type: PostActionType.UPDATE_POST,
-  payload: {
-    post: Post;
-  }
-};
+// export type UpdatePostAction = {
+//   type: PostActionType.UPDATE_POST,
+//   payload: {
+//     post: Post;
+//   }
+// };
 
-export type DeletePostAction = {
-  type: PostActionType.DELETE_POST,
-  payload: {
-    id: string,
-  }
-};
+// export type DeletePostAction = {
+//   type: PostActionType.DELETE_POST,
+//   payload: {
+//     id: string,
+//   }
+// };
 
 export type PostsAction =
   FetchPostsLoadingAction |
   FetchPostsSuccessAction |
   FetchPostsFailureAction |
   PostsClearErrorAction;
-CreateNewPostAction
-  | UpdatePostAction
-  | DeletePostAction;
+// CreateNewPostAction
+//   | UpdatePostAction
+//   | DeletePostAction;

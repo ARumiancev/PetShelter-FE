@@ -45,33 +45,33 @@ const postsReducer: Reducer<PostsState, PostsAction> = (state = initialState, ac
       };
     }
 
-    case PostActionType.NEW_POST:
-      return {
-        ...state,
-        posts: [
-          ...state.posts,
-          {
-            ...action.payload.post,
-            id: createId(),
-          },
-        ],
-      };
+    // case PostActionType.NEW_POST:
+    //   return {
+    //     ...state,
+    //     posts: [
+    //       ...state.posts,
+    //       {
+    //         ...action.payload.post,
+    //         id: createId(),
+    //       },
+    //     ],
+    //   };
 
-    case PostActionType.UPDATE_POST: {
-      const index = state.posts.findIndex((post) => post.id === action.payload.post.id);
-      const newPosts = [...state.posts];
-      newPosts[index] = action.payload.post;
-      return {
-        ...state,
-        posts: newPosts,
-      };
-    }
+    // case PostActionType.UPDATE_POST: {
+    //   const index = state.posts.findIndex((post) => post.id === action.payload.post.id);
+    //   const newPosts = [...state.posts];
+    //   newPosts[index] = action.payload.post;
+    //   return {
+    //     ...state,
+    //     posts: newPosts,
+    //   };
+    // }
 
-    case PostActionType.DELETE_POST:
-      return {
-        ...state,
-        posts: state.posts.filter((posts) => posts.id !== action.payload.id),
-      };
+    // case PostActionType.DELETE_POST:
+    //   return {
+    //     ...state,
+    //     posts: state.posts.filter((posts) => posts.id !== action.payload.id),
+    //   };
 
     default: return state;
   }
