@@ -1,4 +1,5 @@
 import { Dispatch } from 'react';
+import PostService from '../../../services/posts-service';
 import { AppAction, RootState } from '../../redux-types';
 import { PostActionType, PostsAction } from './post-types';
 
@@ -44,26 +45,26 @@ export const createNewPostAction = (post: CreatePost) => async (
   createfetchPostsAction(dispatch);
 };
 
-export const createUpdateSculptureAction = (sculpture: Sculpture) => async (
+export const createUpdatePostAction = (post: Post) => async (
   dispatch: Dispatch<AppAction>,
   getState: () => RootState,
 ) => {
   const { token } = getState().auth;
   if (token === null) {
-    throw new Error('Reikalingas prisijungimas');
+    throw new Error('You need to be logged in.');
   }
-  await SculptureService.updateSculpture(sculpture, token);
-  createfetchSculpturesAction(dispatch);
+  await PostService.updatePost(post, token);
+  createfetchPostsAction(dispatch);
 };
 
-export const createDeleteSculptureAction = (id: string) => async (
+export const createDeletePostAction = (id: string) => async (
   dispatch: Dispatch<AppAction>,
   getState: () => RootState,
 ) => {
   const { token } = getState().auth;
   if (token === null) {
-    throw new Error('Reikalingas prisijungimas');
+    throw new Error('You need to be logged in.');
   }
-  await SculptureService.deleteSculpture(id, token);
-  createfetchSculpturesAction(dispatch);
+  await PostService.deletePost(id, token);
+  createfetchPostsAction(dispatch);
 };
