@@ -5,8 +5,9 @@ import { NavigationState, NavigationAction } from './features/navigation/navigat
 export type RootState = {
   auth: AuthState,
   navigation: NavigationState,
+  posts: PostsState,
 };
 
-export type AppAction = AuthAction | NavigationAction;
+export type AppAction = AuthAction | NavigationAction | PostsAction;
 
 export type AppDispatch = ThunkDispatch<RootState, undefined, AppAction>;
