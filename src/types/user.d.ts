@@ -6,7 +6,6 @@ export type User = {
   role: 'user' | 'admin',
   createdAt: string,
   updatedAt: string,
-  // cartItems: CartItem[],
   name?: string,
   surname?: string,
   img?: string,
