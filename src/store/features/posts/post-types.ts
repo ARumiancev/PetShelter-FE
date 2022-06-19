@@ -56,7 +56,7 @@ export type PostsClearErrorAction = {
 //   }
 // };
 
-export type SculpturesAction =
+export type PostsAction =
   FetchPostsLoadingAction |
   FetchPostsSuccessAction |
   FetchPostsFailureAction |
