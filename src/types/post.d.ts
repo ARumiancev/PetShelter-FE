@@ -1,7 +1,7 @@
 export type Post = {
   id: string,
   petName: string,
-  author?: string | User,
+  author?: string,
   description: string,
   picURL?: string,
   createdAt: string,

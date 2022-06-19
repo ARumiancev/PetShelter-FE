@@ -1,3 +1,4 @@
+import { CreatePost, Post } from '../types';
 import ApiService, { formatError } from './api-service';
 
 const fetchPosts = async (): Promise<Post[]> => {

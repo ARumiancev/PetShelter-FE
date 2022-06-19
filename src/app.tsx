@@ -12,6 +12,7 @@ import RegisterPage from './pages/register-page/index';
 import VisitorLayout from './layouts/visitor-layout';
 import RequireAuth from './routing/require-auth';
 import RequireVisitor from './routing/require-visitor';
+import CreateNewPostPage from './pages/create-new-post-page';
 
 const App: React.FC = () => {
   const location = useLocation();
@@ -45,6 +46,14 @@ const App: React.FC = () => {
             <RequireVisitor>
               <RegisterPage />
             </RequireVisitor>
+          )}
+        />
+        <Route
+          path="admin/posts/create"
+          element={(
+            <RequireAuth>
+              <CreateNewPostPage />
+            </RequireAuth>
           )}
         />
       </Route>
