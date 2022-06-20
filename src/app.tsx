@@ -14,6 +14,7 @@ import RequireAuth from './routing/require-auth';
 import RequireVisitor from './routing/require-visitor';
 import CreateNewPostPage from './pages/create-new-post-page';
 import EditPostsPage from './pages/edit-posts-page';
+import UpdatePostPage from './pages/update-post-page';
 
 const App: React.FC = () => {
   const location = useLocation();
@@ -62,6 +63,14 @@ const App: React.FC = () => {
           element={(
             <RequireAuth>
               <EditPostsPage />
+            </RequireAuth>
+          )}
+        />
+        <Route
+          path="auth/updatePost/:id"
+          element={(
+            <RequireAuth>
+              <UpdatePostPage />
             </RequireAuth>
           )}
         />
