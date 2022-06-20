@@ -6,8 +6,11 @@ const createColor = (color: string): PaletteColor => defaultTheme.palette.augmen
 
 const theme = createTheme({
   palette: {
-    primary: createColor('#fc5e03'),
-    secondary: createColor('#474747'),
+    // primary: createColor('#fc5e03'),
+    // secondary: createColor('#474747'),
+    background: {
+      default: '#7e99d9',
+    },
   },
   shape: {
     borderRadius: 0,
