@@ -8,10 +8,12 @@ import {
 import React from 'react';
 import { Post } from '../../types';
 
-export type PostCardProps = Omit<Post, 'id'>;
+export type InteractiveCardProps = Post & {
+  deleteItem: (itemId: string) => void,
+};
 
-const InteractiveEditablePostCard: React.FC<PostCardProps> = ({
-  petName, author, description, picURL,
+const InteractiveEditablePostCard: React.FC<InteractiveCardProps> = ({
+  id, petName, author, description, picURL, deleteItem,
 }) => (
 
   <Card sx={{ maxWidth: 445 }}>
@@ -67,8 +69,8 @@ const InteractiveEditablePostCard: React.FC<PostCardProps> = ({
               alignSelf: 'end',
               mt: 3,
             }}
-            onClick={() => console.log('cia trinimas')}
-          // onClick={() => deleteItem(id)}
+            // onClick={() => console.log('cia trinimas')}
+            onClick={() => deleteItem(id)}
           >
             X
           </Button>
