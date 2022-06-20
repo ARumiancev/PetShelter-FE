@@ -36,12 +36,12 @@ const PetCard: React.FC<PostCardProps> = ({
         {description}
       </Typography>
     </CardContent>
-    <CardActions>
+    {/* <CardActions>
       <Button size="small">Share</Button>
       <Button size="small">Learn More</Button>
-    </CardActions>
+    </CardActions> */}
     {/* ------------- -----------------------*/}
-    <Card>
+    {/* <Card>
       <CardMedia
         component="img"
         height="140"
@@ -99,7 +99,7 @@ const PetCard: React.FC<PostCardProps> = ({
           </Button>
         </Box>
       </Box>
-    </Card>
+    </Card> */}
   </Card>
 
 );
