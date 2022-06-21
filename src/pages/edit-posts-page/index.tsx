@@ -21,7 +21,14 @@ const EditPostsPage: React.FC = () => {
   }, []);
 
   let pageContent = (
-    <Box sx={{ display: 'flex', justifyContent: 'center', mt: 9 }}>
+    <Box sx={{
+      display: 'flex',
+      justifyContent: 'center',
+      mt: 9,
+      py: 10,
+
+    }}
+    >
       <Typography>Kraunama...</Typography>
     </Box>
   );
@@ -31,14 +38,20 @@ const EditPostsPage: React.FC = () => {
       <Box
         component="section"
         sx={{
-          display: 'flex', gap: 5, mb: 6, flexWrap: 'wrap', justifyContent: 'center',
+          display: 'flex',
+          gap: 5,
+          mb: 6,
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          py: 10,
         }}
       >
         {posts.map((post) => (
-          <Paper
+          <Box
             key={post.id}
             sx={{
-              maxWidth: 250,
+              maxWidth: 350,
+              maxHeight: 600,
               display: 'flex',
               flexDirection: 'column',
             }}
@@ -47,10 +60,10 @@ const EditPostsPage: React.FC = () => {
               {...post}
               deleteItem={() => dispatch(createDeletePostAction(post.id))}
             />
-          </Paper>
+          </Box>
         ))}
       </Box>
-    ) : <Typography component="h2" variant="h3" sx={{ my: 3 }}>No items, sorry.</Typography>;
+    ) : <Typography component="h2" variant="h3" sx={{ my: 3 }}>There are no posts, sorry.</Typography>;
   }
 
   return (

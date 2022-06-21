@@ -76,6 +76,7 @@ const UpdatePostForm: React.FC = () => {
         py: 10,
         display: 'flex',
         justifyContent: 'center',
+
       }}
     >
       <Box
@@ -85,8 +86,8 @@ const UpdatePostForm: React.FC = () => {
           maxWidth: 400,
           px: 4,
           py: 3,
-          bgcolor: 'formColor.main',
-          boxShadow: 2,
+          boxShadow: 10,
+          backgroundColor: 'white',
         }}
       >
         <Typography
@@ -127,7 +128,7 @@ const UpdatePostForm: React.FC = () => {
         <TextField
           name="author"
           type="text"
-          label="Author"
+          label="Type of animal"
           value={values.author}
           onChange={handleChange}
           onBlur={handleBlur}
@@ -179,12 +180,30 @@ const UpdatePostForm: React.FC = () => {
         </Typography>
 
         <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 3 }}>
-          <Button type="submit">Update</Button>
+
           <Button
             type="button"
             onClick={() => navigate('/auth/editPosts')}
+            sx={{
+              px: 4,
+              py: 1,
+              boxShadow: 4,
+              backgroundColor: 'white',
+            }}
           >
             Back
+          </Button>
+          <Button
+            type="submit"
+            sx={{
+              px: 4,
+              py: 1,
+              boxShadow: 4,
+              backgroundColor: 'white',
+            }}
+          >
+            Update
+
           </Button>
         </Box>
       </Box>

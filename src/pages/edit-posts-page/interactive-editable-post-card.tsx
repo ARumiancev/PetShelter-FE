@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Button,
   Card,
@@ -5,7 +6,8 @@ import {
   Typography,
   Box,
 } from '@mui/material';
-import React from 'react';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import EditIcon from '@mui/icons-material/Edit';
 import { useNavigate } from 'react-router-dom';
 import { Post } from '../../types';
 
@@ -13,20 +15,18 @@ export type InteractiveCardProps = Post & {
   deleteItem: (itemId: string) => void,
 };
 
-// const navigate = useNavigate();
-
 const InteractiveEditablePostCard: React.FC<InteractiveCardProps> = ({
   id, petName, author, description, picURL, deleteItem,
 }) => {
   const navigate = useNavigate();
   return (
 
-    <Card sx={{ maxWidth: 445 }}>
+    <Card sx={{ maxWidth: 345 }}>
 
       <Card>
         <CardMedia
           component="img"
-          height="140"
+          height="300"
           image={picURL}
           alt="picture of your potential pet"
         />
@@ -54,18 +54,21 @@ const InteractiveEditablePostCard: React.FC<InteractiveCardProps> = ({
             <Typography>{` ${description}`}</Typography>
           </Box>
 
-          <Box sx={{ display: 'flex', gap: 1, justifyContent: 'end' }}>
+          <Box sx={{ display: 'flex', gap: 2, justifyContent: 'end' }}>
             <Button
               variant="outlined"
               sx={{
                 minWidth: '40px',
                 alignSelf: 'end',
                 mt: 3,
+                fontSize: 18,
               }}
               // onClick={() => console.log('cia update\'as')}
               onClick={() => navigate(`/auth/updatePost/${id}`)}
             >
               Edit
+              {' '}
+              <EditIcon />
             </Button>
             <Button
               variant="outlined"
@@ -73,11 +76,15 @@ const InteractiveEditablePostCard: React.FC<InteractiveCardProps> = ({
                 minWidth: '40px',
                 alignSelf: 'end',
                 mt: 3,
+                fontSize: 18,
+                color: '#bf1e0f',
               }}
               // onClick={() => console.log('cia trinimas')}
               onClick={() => deleteItem(id)}
             >
-              X
+              {' '}
+              Delete
+              <DeleteForeverIcon color="warning" />
             </Button>
           </Box>
         </Box>

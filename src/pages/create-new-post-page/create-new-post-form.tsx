@@ -5,7 +5,6 @@ import { useFormik, FormikConfig } from 'formik';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
-// import ButtonScale from '../../../../components/button-scale';
 import { createNewPostAction } from '../../store/features/post/post-action-creators';
 import { useRootDispatch } from '../../store/hooks';
 import { CreatePost } from '../../types';
@@ -63,9 +62,9 @@ const CreateNewPostForm: React.FC = () => {
           width: 400,
           px: 4,
           py: 3,
-          bgcolor: 'formColor.main',
           boxShadow: 10,
           backgroundColor: 'white',
+
         }}
       >
         <Typography
@@ -147,15 +146,13 @@ const CreateNewPostForm: React.FC = () => {
           {touched.picURL && errors.picURL}
         </Typography>
 
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 3 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
           <Button
             type="submit"
             sx={{
-              maxWidth: 400,
               px: 4,
               py: 3,
-              bgColor: '#1976d2',
-              boxShadow: 2,
+              boxShadow: 4,
               backgroundColor: 'white',
             }}
           >
