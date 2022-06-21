@@ -7,10 +7,12 @@ import {
   MenuList,
   MenuItem,
   Typography,
+  Container,
 } from '@mui/material';
 import { selectAuthUser } from '../../store/selectors';
 import { authLogoutAction } from '../../store/action-creators';
 import { useRootDispatch, useRootSelector } from '../../store/hooks';
+import NavbarLink from './navbar-link';
 
 const NavbarAuthMenu: React.FC = () => {
   const user = useRootSelector(selectAuthUser);
@@ -35,6 +37,11 @@ const NavbarAuthMenu: React.FC = () => {
       ref={popperAnchorRef}
       sx={{ display: 'inline-flex', alignItems: 'center', height: 64 }}
     >
+      <Container sx={{ mx: 2 }}>
+
+        <NavbarLink to="/auth/createPost">Create a post</NavbarLink>
+        <NavbarLink to="/auth/editPosts">Edit existing posts</NavbarLink>
+      </Container>
       <Box
         sx={{
           display: 'flex',
@@ -43,7 +50,11 @@ const NavbarAuthMenu: React.FC = () => {
         }}
         onClick={handleMenuOpen}
       >
-        <Typography sx={{ mr: 2, userSelect: 'none' }}>{user?.email}</Typography>
+        <Typography sx={{ mr: 2, userSelect: 'none' }}>
+          Hey there,
+          {' '}
+          {user?.email}
+        </Typography>
         {(userInitials || user?.img) && <Avatar src={user?.img}>{userInitials}</Avatar>}
 
       </Box>
