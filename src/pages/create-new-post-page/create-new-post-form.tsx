@@ -60,11 +60,12 @@ const CreateNewPostForm: React.FC = () => {
         component="form"
         onSubmit={handleSubmit}
         sx={{
-          maxWidth: 400,
+          width: 400,
           px: 4,
           py: 3,
           bgcolor: 'formColor.main',
-          boxShadow: 2,
+          boxShadow: 10,
+          backgroundColor: 'white',
         }}
       >
         <Typography
@@ -147,7 +148,20 @@ const CreateNewPostForm: React.FC = () => {
         </Typography>
 
         <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 3 }}>
-          <Button type="submit">Create post</Button>
+          <Button
+            type="submit"
+            sx={{
+              maxWidth: 400,
+              px: 4,
+              py: 3,
+              bgColor: '#1976d2',
+              boxShadow: 2,
+              backgroundColor: 'white',
+            }}
+          >
+            Create post
+
+          </Button>
 
         </Box>
       </Box>

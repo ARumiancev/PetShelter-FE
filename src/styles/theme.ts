@@ -9,7 +9,7 @@ const theme = createTheme({
     // primary: createColor('#fc5e03'),
     // secondary: createColor('#474747'),
     background: {
-      default: '#7e99d9',
+      default: '#b4c0de',
     },
   },
   shape: {

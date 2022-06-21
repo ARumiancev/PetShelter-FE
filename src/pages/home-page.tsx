@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import {
-  Box, Card, Container, Grid,
+  Box, Container, Grid,
 } from '@mui/material';
 import { useRootDispatch, useRootSelector } from '../store/hooks';
 import { createfetchPostsAction } from '../store/features/post/post-action-creators';
@@ -17,7 +17,14 @@ const Homepage: React.FC = () => {
   }, []);
 
   return (
-    <Container sx={{ textAlign: 'center' }}>
+    <Container sx={{
+      textAlign: 'center',
+      display: 'flex',
+      justifyContent: 'center',
+      flexWrap: 'Wrap',
+      py: 8,
+    }}
+    >
       <Box
         component="section"
         gap={5}
@@ -26,9 +33,10 @@ const Homepage: React.FC = () => {
           justifyContent: 'center',
           flexWrap: 'Wrap',
           py: 8,
+          color: 'white',
         }}
       >
-        {posts.length === 0 && <p>There are no pets for adoption</p>}
+        {posts.length !== 0 && <h1>Hooray! No animals need new homes! </h1>}
 
         {posts.map(({
           id, ...PostProps
