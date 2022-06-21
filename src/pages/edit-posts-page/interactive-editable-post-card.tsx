@@ -54,7 +54,7 @@ const InteractiveEditablePostCard: React.FC<InteractiveCardProps> = ({
             <Typography>{` ${description}`}</Typography>
           </Box>
 
-          <Box sx={{ display: 'flex', gap: 2, justifyContent: 'end' }}>
+          <Box sx={{ display: 'flex', gap: 2, justifyContent: 'space-between' }}>
             <Button
               variant="outlined"
               sx={{
