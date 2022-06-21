@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
 
             <NavbarLink to="/">
               <PetsIcon sx={{ mr: 1 }} />
-              Available animals
+              LostAndHound
             </NavbarLink>
           </Box>
           <Box sx={{ display: 'flex' }}>
