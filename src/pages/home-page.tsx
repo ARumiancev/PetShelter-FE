@@ -36,7 +36,7 @@ const Homepage: React.FC = () => {
           color: 'white',
         }}
       >
-        {posts.length !== 0 && <h1>Hooray! No animals need new homes! </h1>}
+        {posts.length === 0 && <h1>Hooray! No animals need new homes! </h1>}
 
         {posts.map(({
           id, ...PostProps

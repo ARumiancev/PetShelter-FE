@@ -1,10 +1,14 @@
+import React from 'react';
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   Card,
   CardContent,
   CardMedia,
   Typography,
 } from '@mui/material';
-import React from 'react';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Post } from '../types';
 
 export type PostCardProps = Omit<Post, 'id'>;
@@ -15,7 +19,6 @@ const PetCard: React.FC<PostCardProps> = ({
 }) => (
 
   <Card sx={{ width: 345 }}>
-    <Typography>{author}</Typography>
     <CardMedia
       component="img"
       height="140"
@@ -23,14 +26,23 @@ const PetCard: React.FC<PostCardProps> = ({
       alt="picture of your potential pet"
       sx={{ height: 350 }}
     />
-    <CardContent>
-      <Typography gutterBottom variant="h5" component="div">
-        {petName}
-      </Typography>
-      <Typography variant="body2" color="text.secondary">
-        {description}
-      </Typography>
-    </CardContent>
+    <Accordion elevation={0}>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls="panel1a-content"
+        id="panel1a-header"
+      >
+        <Typography gutterBottom variant="h5" component="div" justifySelf="center">
+          {petName}
+        </Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+
+        <Typography variant="body2" color="text.secondary">
+          {description}
+        </Typography>
+      </AccordionDetails>
+    </Accordion>
 
   </Card>
 
