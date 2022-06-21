@@ -28,16 +28,21 @@ const NavbarAuthMenu: React.FC = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const userInitials = user && user.name && user.surname
-    ? user.name[0] + user.surname[0]
-    : null;
+  // const userInitials = user && user.name && user.surname
+  //   ? user.name[0] + user.surname[0]
+  //   : null;
 
   return (
     <Box
       ref={popperAnchorRef}
-      sx={{ display: 'inline-flex', alignItems: 'center', height: 64 }}
+      sx={{
+        display: 'inline-flex', alignItems: 'center', height: 64, justifyContent: 'flex-end',
+      }}
     >
-      <Container sx={{ mx: 2 }}>
+      <Container sx={{
+
+      }}
+      >
 
         <NavbarLink to="/auth/createPost">Create a post</NavbarLink>
         <NavbarLink to="/auth/editPosts">Edit existing posts</NavbarLink>
@@ -50,12 +55,11 @@ const NavbarAuthMenu: React.FC = () => {
         }}
         onClick={handleMenuOpen}
       >
-        <Typography sx={{ mr: 2, userSelect: 'none' }}>
+        <Typography sx={{ userSelect: 'none' }}>
           Hey there,
           {' '}
           {user?.email}
         </Typography>
-        {(userInitials || user?.img) && <Avatar src={user?.img}>{userInitials}</Avatar>}
 
       </Box>
       <Popper
@@ -67,7 +71,7 @@ const NavbarAuthMenu: React.FC = () => {
         <Paper elevation={3}>
           <MenuList>
             <MenuItem onClick={logout}>
-              Atsijungti
+              Log out
             </MenuItem>
           </MenuList>
         </Paper>

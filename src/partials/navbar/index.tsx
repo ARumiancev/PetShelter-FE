@@ -5,6 +5,7 @@ import {
   Container,
   Toolbar,
 } from '@mui/material';
+import PetsIcon from '@mui/icons-material/Pets';
 import NavbarLink from './navbar-link';
 import NavbarAuthMenu from './navbar-auth-menu';
 import NavbarVisitorMenu from './navbar-visitor-menu';
@@ -23,7 +24,11 @@ const Navbar: React.FC = () => {
         }}
         >
           <Box>
-            <NavbarLink to="/">Home</NavbarLink>
+
+            <NavbarLink to="/">
+              <PetsIcon sx={{ mr: 1 }} />
+              Available animals
+            </NavbarLink>
           </Box>
           <Box sx={{ display: 'flex' }}>
 

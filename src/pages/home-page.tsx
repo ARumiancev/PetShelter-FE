@@ -23,8 +23,11 @@ const Homepage: React.FC = () => {
       justifyContent: 'center',
       flexWrap: 'Wrap',
       py: 8,
+      fontSize: 30,
+      color: '#2a3242',
     }}
     >
+      {posts.length === 0 ? <h1>Hooray! No animals need new homes! </h1> : <h1>These animals are looking for a new home</h1>}
       <Box
         component="section"
         gap={5}
@@ -36,15 +39,16 @@ const Homepage: React.FC = () => {
           color: 'white',
         }}
       >
-        {posts.length === 0 && <h1>Hooray! No animals need new homes! </h1>}
 
-        {posts.map(({
-          id, ...PostProps
-        }) => (
-          <Grid key={id} item xs={12} lg={4}>
-            <PetCard {...PostProps} />
-          </Grid>
-        ))}
+        {
+          posts.map(({
+            id, ...PostProps
+          }) => (
+            <Grid key={id} item xs={12} lg={4}>
+              <PetCard {...PostProps} />
+            </Grid>
+          ))
+        }
 
       </Box>
       <Box />
@@ -53,11 +57,3 @@ const Homepage: React.FC = () => {
 };
 
 export default Homepage;
-
-// import React from 'react';
-
-// const Homepage = () => (
-//   <div>Homepage</div>
-// );
-
-// export default Homepage;

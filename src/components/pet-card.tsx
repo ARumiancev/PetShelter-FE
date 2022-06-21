@@ -32,7 +32,7 @@ const PetCard: React.FC<PostCardProps> = ({
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
-        <Typography gutterBottom variant="h5" component="div" justifySelf="center">
+        <Typography gutterBottom variant="h5" component="div">
           {petName}
         </Typography>
       </AccordionSummary>
