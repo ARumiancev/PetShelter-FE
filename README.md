@@ -1,4 +1,4 @@
-# Demo E-shop
+# Demo Pet shelter page
 
 ## System requirements
   * Node.js

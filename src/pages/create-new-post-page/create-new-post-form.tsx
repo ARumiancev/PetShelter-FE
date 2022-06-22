@@ -95,7 +95,7 @@ const CreateNewPostForm: React.FC = () => {
         <TextField
           name="author"
           type="text"
-          label="Author"
+          label="Type of animal"
           value={values.author}
           onChange={handleChange}
           onBlur={handleBlur}
@@ -113,7 +113,7 @@ const CreateNewPostForm: React.FC = () => {
         <TextField
           name="description"
           type="text"
-          label="description"
+          label="Description"
           value={values.description}
           onChange={handleChange}
           onBlur={handleBlur}
