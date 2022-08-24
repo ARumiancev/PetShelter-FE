@@ -33,7 +33,7 @@ This is a website for a mock pet shelter. I used the MERN stack (MongoDB, Expres
   * npm i
 
 ## Project scripts
-  * npm start - launch development server
+  * npm start - launch development app
   * npm build - compile app
 
 ## User credentials for testing:
