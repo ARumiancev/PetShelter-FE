@@ -1,9 +1,29 @@
-# Demo Pet shelter page
+# Pet shelter page
+This is a website for a mock pet shelter. I used the MERN stack (MongoDB, Express, React.js, Node.js) and Redux for state management. Functionality:
+  * Registration:
+    * With form validation.
+    * Checks if email is taken or available. 
+    * Creates a unique token.
+  * Login:
+    * With form validation.
+    * Uses unique token to varify crudentials.
+  * CRUD:
+    * the homepage displays the posts that are fetched from the BE database.
+    * if the user is logged in, you can:
+      * create new posts (the form checks if the user entered valid information).
+      * edit existing posts.
+      * delete existing posts.
+  * Passwords are NOT just stored in the BE - they're encrypted.
+  * The layout of the navbar is different, depending if the person is logged in or not. 
+  * Protected routing - if you are not logged in, you can't access restricted pages by entering the corresponding URL. 
+  * Log out.
 
 ## System requirements
   * Node.js
 
-## Project configuration
+## Project instructions:
+  * Clone Back-end application and follow instructions in README.md file: 
+    * [Back-end of the app](https://github.com/ARumiancev/PetShelter-server)
   * Rename .env.local-example file to .env.local
   * Define variables:
     * REACT_APP_USER_KEY_IN_LOCAL_STORAGE - name of user key in local storage
@@ -13,6 +33,9 @@
   * npm i
 
 ## Project scripts
-  * npm start - lounch development server
+  * npm start - launch development server
   * npm build - compile app
-  * npm run server - lounches demo server
+
+## User credentials for testing:
+email: user2@gmail.com
+password: Vilnius123

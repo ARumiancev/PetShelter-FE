@@ -1,8 +1,8 @@
 import { createTheme, PaletteColor } from '@mui/material';
 
-const defaultTheme = createTheme();
+// const defaultTheme = createTheme();
 
-const createColor = (color: string): PaletteColor => defaultTheme.palette.augmentColor({ color: { main: color } });
+// const createColor = (color: string): PaletteColor => defaultTheme.palette.augmentColor({ color: { main: color } });
 
 const theme = createTheme({
   palette: {
