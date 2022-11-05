@@ -1,5 +1,5 @@
 # Pet shelter page
-This is a website for a mock pet shelter. I used the MERN stack (MongoDB, Express, React.js, Node.js) and Redux for state management. Functionality:
+This is a website for a mock pet shelter. I used the MERN stack (MongoDB, Express, React.js, Node.js), Redux for state management and TypeScript for error reduction. Functionality:
   * Registration:
     * With form validation.
     * Checks if email is taken or available. 
